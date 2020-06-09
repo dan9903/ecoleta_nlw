@@ -28,7 +28,7 @@ const CreatePoint = () => {
   const [ufs, setUfs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
   const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0]);
-  const [formData, setFromData] = useState({ name: '', email: '', whatsapp: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', whatsapp: '' });
 
   const [selectedUf, setSelectedUf] = useState('0');
   const [selectedCity, setSelectedCity] = useState('0');
@@ -90,7 +90,7 @@ const CreatePoint = () => {
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
-    setFromData({ ...formData, [name]: value });
+    setFormData({ ...formData, [name]: value });
   }
 
   function handleSelectItem(id: number) {
